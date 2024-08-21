@@ -1,0 +1,1 @@
+docker run -d --name flutter_dev -v $(pwd):/workspace ethanoic/flutter-web:latest
