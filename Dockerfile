@@ -1,4 +1,6 @@
-FROM ubuntu:20.04 AS builder
+FROM --platform=$BUILDPLATFORM ubuntu:20.04 AS build
+ARG TARGETPLATFORM
+ARG BUILDPLATFORM
 
 RUN apt-get update
 RUN apt-get install -y bash curl file git unzip xz-utils zip libglu1-mesa
